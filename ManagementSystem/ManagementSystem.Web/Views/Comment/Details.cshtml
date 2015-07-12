@@ -1,0 +1,66 @@
+﻿@model ManagementSystem.Models.Comment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Comment</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Author on Comment
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author.UserName)
+        </dd>
+
+        <dt>
+            Comment Type
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommentType.Name)
+        </dd>
+
+        <dt>
+            Issue Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Issue.Name)
+        </dd>
+
+        <dt>
+           Date Added
+        </dt>
+
+        <dd>          
+            @Model.DateAdded.ToString("yyyy-MM-dd")
+        </dd>
+
+        <dt>
+           Reminder Date
+        </dt>
+
+        <dd>          
+            @Model.ReminderDate.ToString("yyyy-MM-dd")
+        </dd>
+
+        <dt>
+            Content
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ManagementSystem.Web.Models.IssueViewModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="color-text" class="jumbotron">
+    <h1>Management System</h1>
+</div>
+
+<div class="row">
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+        var issue = Model.ElementAt(i);
+        <div id="task-box" class="col-md-4">
+            <h2>@issue.Name</h2>
+            <span>
+               <b>Created Date:</b>  @issue.CreatedDate.ToString("yyyy-MM-dd")
+            </span><br />
+            <span>
+                <b> Required Date:</b> @issue.RequiredByDate.ToString("yyyy-MM-dd")
+            </span><br />
+            <div style="width:400px;height: 50px; padding: 10px;">
+                @issue.Description
+            </div>
+            <span>
+                <b> Status Task:</b> @issue.Status
+            </span><br/>
+            <span>
+                <b>Type Task:</b> @issue.Type
+            </span><br />
+            <span>
+                <b>New Action Date:</b> @issue.NextActionDate.ToString("yyyy-MM-dd")
+            </span>   
+            <p style="margin-top:10px;">
+                <span class="btn btn-default" >@Html.ActionLink("Comments", "../Comment")</span>
+            </p>
+        </div>
+         
+        if (i > 0 && ((i + 1) % 3) == 0)
+        {
+            @:</div>            
+            @:<div class="row">
+        }
+    }
+     
+</div>

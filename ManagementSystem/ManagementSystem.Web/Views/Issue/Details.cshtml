@@ -1,0 +1,74 @@
+﻿@model ManagementSystem.Models.Issue
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Issue</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Issue Type Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IssueType.Name)
+        </dd>
+
+        <dt>
+           Status Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.Name)
+        </dd>
+
+        <dt>
+            Task Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Created Date
+        </dt>
+
+        <dd>          
+            @Model.CreatedDate.ToString("yyyy-MM-dd")
+        </dd>
+
+        <dt>
+           Required By Date
+        </dt>
+
+        <dd>          
+            @Model.RequiredByDate.ToString("yyyy-MM-dd")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            Next Action Date
+        </dt>
+
+        <dd>           
+            @Model.NextActionDate.ToString("yyyy-MM-dd")
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

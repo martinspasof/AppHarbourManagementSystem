@@ -1,0 +1,16 @@
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\ManagementSystem.Data.dll.config
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\ManagementSystem.Data.dll
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\ManagementSystem.Data.pdb
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\EntityFramework.dll
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\ManagementSystem.Models.dll
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\ManagementSystem.Models.pdb
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\EntityFramework.xml
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Temp\ManagementSystem\ManagementSystem.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Temp\ManagementSystem\ManagementSystem.Data\obj\Debug\ManagementSystem.Data.csprojResolveAssemblyReference.cache
+C:\Temp\ManagementSystem\ManagementSystem.Data\obj\Debug\ManagementSystem.Data.dll
+C:\Temp\ManagementSystem\ManagementSystem.Data\obj\Debug\ManagementSystem.Data.pdb

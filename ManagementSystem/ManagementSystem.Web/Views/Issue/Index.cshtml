@@ -1,0 +1,78 @@
+﻿@model IEnumerable<ManagementSystem.Models.Issue>
+@using Microsoft.AspNet.Identity;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New Issue", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Task Type
+        </th>
+        <th>
+            Status Task
+        </th>
+        <th>
+            Name Task
+        </th>
+        <th>
+            Created Date
+        </th>
+        <th>
+            Required By Date
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+           Next Action Date
+        </th>
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IssueType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @item.CreatedDate.ToString("yyyy-MM-dd")
+        </td>
+        <td>
+            @item.RequiredByDate.ToString("yyyy-MM-dd")
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @item.NextActionDate.ToString("yyyy-MM-dd")
+        </td>
+        <td>
+            @if (item.UserId == this.User.Identity.GetUserId() && this.User.Identity.IsAuthenticated)
+            {
+             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) @: |
+            }
+            
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) 
+            @if (item.UserId == this.User.Identity.GetUserId() && this.User.Identity.IsAuthenticated)
+            {
+                @: |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            }
+        </td>
+    </tr>
+}
+
+</table>
